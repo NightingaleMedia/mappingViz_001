@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+
+
+
+<svg class="main">
+<rect></rect>
+
+<rect></rect>
+<rect></rect>
+<rect></rect>
+<rect></rect>
+</svg>
+<text></text>
+<text></text>
+<text></text>
+<text></text>
+
+
+<div class="text"></div>
+<div class="text"></div>
+<style>
+  .main {
+    width: 800px;
+  }
+  </style>
+
+<script>
+
+  var cities = [
+    { name: 'London', population: 867400},
+    { name: 'New York', population: 940600},
+    { name: 'Sydney', population: 4293000},
+    { name: 'Paris', population: 2244000},
+    { name: 'Beijing', population: 11510000}
+  ];
+
+  // Join cities to rect elements and modify height, width and position
+  d3.selectAll('rect')
+    .data(cities)
+    .attr('height', 25)
+    .attr('width', function(d) {
+      var scaleFactor = 0.00009;
+      return d.population * scaleFactor;
+    })
+    .attr('y', function(d, i) {
+      return i * 30;
+    })
+
+  // Join cities to text elements and modify content and position
+  d3.selectAll('text')
+    .data(cities)
+    .attr('y', function(d, i) {
+      return i * 20 + 13;
+    })
+    .attr('x', -4)
+    .text(function(d) {
+      return d.name;
+    });
+
+
+</script>
+</body>
+</html>
