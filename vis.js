@@ -1,4 +1,5 @@
-// import * as parser from './assets/papaparse.js';
+// import {stateData }from './cleaned_states.js';
+
 const c1 = 'rgba(0,155,0)'
 const c2 = 'rgba(0,155,0)'
 const c3 = 'rgba(160,0,0,0.6)'
@@ -46,6 +47,8 @@ fetch('cleaned_states.json')
   .then(results => results.json())
   .then(info => parseState(info))
 
+
+
 class weekBuilder {
   constructor(state,i,w) {
     this.header = document.createElement('div');
@@ -62,13 +65,10 @@ class weekBuilder {
 
     this.concern.style.width = width ;
     this.concern.addEventListener('mouseover', (e)=>{
-      // console.log(e.clientX)
     
       toolTip.innerHTML = `${i}<br>${width}<br>Week: ${w+1}<p>Level Of Concern</p>`;
       toolTip.style.marginTop = `${e.clientY}px`;
       toolTip.style.marginLeft = `${e.clientX}px`;
-
-      // console.log(`${i}, ${width} Concerned`)
     })
     this.concern.style.backgroundColor = color;
     this.container.appendChild(this.concern);
