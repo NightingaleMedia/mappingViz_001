@@ -1,4 +1,5 @@
-[{
+let stateData = [
+    {
     "info": {
         "name": "AE",
         "week1": {
