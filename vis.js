@@ -103,7 +103,26 @@ aboutBtn.addEventListener('click', (e) => {
         this.concern.style.width = width;
         this.concern.addEventListener('mouseover', (e) => {
 
-          toolTip.innerHTML = `${i}<br>${width}<br>Week: ${w+1}<p>Level Of Concern</p>`;
+          const parseConcern = (concernNo) => {
+            console.log(concernNo.charAt(7))
+            switch(concernNo.charAt(7)){
+              case '1': return 'yed'
+              break;
+              case '2': return 'ned'
+              break;
+              case '3': return "third"
+              break
+              case '4': return 'four'
+              break
+              case '5': return 'five'
+              default: return 'default';
+            }
+          }
+          toolTip.innerHTML = 
+          `<div>${i}<br>${width}</div>
+          <div> ${parseConcern(concernNo)} </div>
+          <div>Week: ${w+1}</div>
+          `;
           toolTip.style.marginTop = `${e.clientY}px`;
           toolTip.style.marginLeft = `${e.clientX}px`;
 
