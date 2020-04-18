@@ -1,4 +1,4 @@
-let stateData = [
+const stateData = [
     {
     "info": {
         "name": "AE",
@@ -2067,3 +2067,5 @@ let stateData = [
         }
     }
 }]
+
+export {stateData}
