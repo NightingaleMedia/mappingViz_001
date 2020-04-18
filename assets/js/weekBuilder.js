@@ -3,19 +3,19 @@ import{concerns} from './vis.js'
 const parseConcern = (concernNo) => {
     switch (concernNo.charAt(7)) {
         case '1':
-            return concerns[0].c1
+            return concerns[0]
             break;
         case '2':
-            return concerns[0].c2
+            return concerns[1]
             break;
         case '3':
-            return concerns[0].c3
+            return concerns[2]
             break
         case '4':
-            return concerns[0].c4
+            return concerns[3]
             break
         case '5':
-            return concerns[0].c5
+            return concerns[4]
         default:
             return '';
     }
@@ -47,8 +47,8 @@ class weekBuilder {
           <div> ${parseConcern(concernNo)} </div>
           <div>Week: ${w+1}</div>
           `;
-            toolTip.style.marginTop = `${e.clientY}px`;
-            toolTip.style.marginLeft = `${e.clientX}px`;
+            toolTip.style.marginTop = `${e.clientY*1.125}px`;
+            toolTip.style.marginLeft = `${e.clientX*1.05}px`;
 
         })
 

@@ -1,11 +1,11 @@
  :root {
      --concern-height: 15px;
-     --tool-tip:white;
-     --concern1:#ffeeee;
-     --concern2:#ffadad;
-     --concern3:#ff7a7a;
-     --concern4:#fd3434;
-     --concern5:#5c0000;
+     --tool-tip: white;
+     --concern1: #ffc4c4;
+     --concern2: #ff8d8d;
+     --concern3: #ff4d4d;
+     --concern4: #d42f2f;
+     --concern5: #5c0000;
  }
 
  body {
@@ -51,7 +51,7 @@
      position: relative;
      border: 1px solid black;
      min-height: 100vh;
-     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23d2d2d2' fill-opacity='0.3' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23d2d2d2' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
  }
 
  .input-section {
@@ -73,6 +73,7 @@
      font-size: 0.75rem;
      font-weight: 600;
      width: 80px;
+     color: grey;
      align-self: flex-end;
  }
 
@@ -98,6 +99,7 @@
      position: fixed;
      z-index: 100;
      cursor: pointer;
+     box-shadow: 0px 2px 10px black;
  }
 
  .about-box div {
@@ -181,6 +183,7 @@
      font-size: 1rem;
      padding: 5px;
      z-index: 99;
+     box-shadow: 0px 2px 10px black;
  }
 
  .tool-tip div:nth-of-type(1) {
