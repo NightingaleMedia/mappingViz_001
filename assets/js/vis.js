@@ -20,19 +20,20 @@ aboutBtn.addEventListener('click', (e) => {
   })
 })
 const setColor = (selector, color) => {
-  document.documentElement.style.setProperty(selector, color)
+  document.documentElement.style.setProperty(selector,color)
   return color;
 }
-const colorz = (d) => {
-  let style = getComputedStyle(document.body)
+const getColor = (d) => {
+  let style = window.getComputedStyle(document.body)
   return style.getPropertyValue(d)
 }
 const colorPickers = document.querySelectorAll('input');
 colorPickers.forEach(input => {
   input.addEventListener('change', () => {
-    setColor(input.id, input.value)
+    setColor(`--${input.id}`, input.value.replace(' ',''))
   })
-  input.value = colorz(`${input.id}`);
+  input.value = getColor('--' + input.id).replace(' ', '');
+
 })
 
 
