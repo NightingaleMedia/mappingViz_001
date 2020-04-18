@@ -4,7 +4,7 @@ let filename = 'cleaned_states'
 let input = `${filename}.csv`
 let output = `${filename}.json`
 
-const csv = require('./node_modules/csv-parser');
+const csv = require('csv-parser');
 const fs = require('fs');
 
 class State {
